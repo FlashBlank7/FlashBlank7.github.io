@@ -1,43 +1,20 @@
-# Chirpy Starter
+# FlashBlank7 · Lilies
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+个人主页：[flashblank7.github.io](https://flashblank7.github.io/)
 
-When installing the [**Chirpy**][chirpy] theme through [RubyGems.org][gem], Jekyll can only read files in the folders
-`_data`, `_layouts`, `_includes`, `_sass` and `assets`, as well as a small part of options of the `_config.yml` file
-from the theme's gem. If you have ever installed this theme gem, you can use the command
-`bundle info --path jekyll-theme-chirpy` to locate these files.
+研究与项目、小说与世界、原创音乐与翻唱。保留 Lilies 开场动画，界面可用顶部的「中文 / EN」切换；作品正文和原始作品名称保留原文。
 
-The Jekyll team claims that this is to leave the ball in the user’s court, but this also results in users not being
-able to enjoy the out-of-the-box experience when using feature-rich themes.
+- 中文界面：<https://flashblank7.github.io/?lang=zh>
+- English interface: <https://flashblank7.github.io/?lang=en>
 
-To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
-Jekyll site. The following is a list of targets:
+## 发布
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+`dist/` 是完整、可独立托管的静态网站。推送到 `main` 后，GitHub Actions 检查站内链接和音频文件，再将该目录发布到 GitHub Pages。无需 Jekyll、后端服务或 ChatGPT 登录。
 
-To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
-latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
+本地检查：`python scripts/validate-site.py`
 
-## Usage
+本地预览：`python -m http.server 8080 --directory dist`
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+34 个页面、22 个阅读页、27 份音频均包含在仓库内。新增工作稿不属于本次发布，小说只使用已确认的原有正文。
 
-## Contributing
-
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
-
-## License
-
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+仓库早期的 Chirpy 模板文件保留在根目录和 Git 历史中，不参与当前 `dist/` 发布。根目录原有的 `LICENSE` 来自该模板，不为小说、插图或音乐等作品授予许可。

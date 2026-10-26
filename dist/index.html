@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a13">
+  <meta name="description" content="FlashBlank7 的研究与创作世界，由 Lilies 为你开启。">
+  <meta property="og:title" content="FlashBlank7 · Lilies">
+  <meta property="og:description" content="研究、故事与声音，在这里相遇。">
+  <meta property="og:url" content="https://flashblank7.github.io/">
+  <title>FlashBlank7 · Lilies</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="/i18n.js"></script><script type="module" src="opening.js"></script>
+<link rel="stylesheet" href="/i18n.css"></head>
+<body data-phase="intro">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="masthead">
+    <a class="wordmark" href="./" aria-label="FlashBlank7 首页">F<span class="mark">/</span>B<span class="tiny">7</span></a>
+    <span class="masthead-note">A PERSONAL UNIVERSE</span>
+    <div class="top-controls">
+      <button id="sound" aria-pressed="false" title="播放原创音乐 v68"><span class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span id="sound-label">开启音乐</span></button>
+      <button id="skip">跳过开场 <span aria-hidden="true">↗</span></button>
+    </div>
+  </header>
+  <main id="main">
+    <div class="encounter" aria-hidden="true">
+      <div class="halo"><div class="halo-inner"></div><span class="orbit-tick tick-a">01</span><span class="orbit-tick tick-b">07</span></div>
+      <div class="portrait-wrap"><img id="lilies" src="assets/lilies.png" width="1162" height="2400" alt="" fetchpriority="high"><div class="portrait-light"></div></div>
+      <div class="platform"></div>
+      <div class="specimen-label"><span class="status-light"></span> LILIES <span class="muted">/ FIRST ENCOUNTER</span></div>
+    </div>
+    <svg class="cord" viewBox="0 0 1440 1000" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="cord-light"><stop stop-color="#b75a72"/><stop offset=".5" stop-color="#f4b6bd"/><stop offset="1" stop-color="#bb84e9"/></linearGradient></defs><path id="thread" d="M720 425 C680 605 1140 860 1280 520 C1400 200 650 60 370 450 C200 680 250 800 530 780"/></svg>
+    <div class="arrival" aria-hidden="true"><span>FIRST ENCOUNTER</span><p>你找到这里了。</p></div>
+    <section class="hero" aria-labelledby="site-title">
+      <p class="eyebrow"><span></span> 研究 · 故事 · 声音</p>
+      <h1 id="site-title">Flash<br><span>Blank</span><em>7</em><span class="title-dot">.</span></h1>
+      <p class="intro-copy">一些关于世界的求索，<br>和一些属于自己的世界。</p>
+      <button class="explore" data-panel="all"><span>跟随 Lilies，开始探索</span><span class="arrow" aria-hidden="true">↗</span></button>
+    </section>
+    <nav class="destinations" aria-label="作品入口">
+      <button data-panel="research"><span class="destination-no">01</span><span><strong>研究与项目</strong><small>RESEARCH &amp; PROJECTS</small></span><span class="destination-arrow" aria-hidden="true">↗</span></button>
+      <button data-panel="fiction"><span class="destination-no">02</span><span><strong>小说与世界</strong><small>STORIES &amp; WORLDS</small></span><span class="destination-arrow" aria-hidden="true">↗</span></button>
+      <button data-panel="music"><span class="destination-no">03</span><span><strong>音乐</strong><small>SOUND &amp; RESONANCE</small></span><span class="destination-arrow" aria-hidden="true">↗</span></button>
+    </nav>
+  </main>
+  <footer>
+    <div><span class="footer-label">FLASHBLANK7</span><span class="footer-divider">/</span><span>研究 · 故事 · 声音</span></div>
+    <div class="footer-controls"><button id="motion" aria-pressed="false">暂停动效</button><button id="replay">重看相遇 <span aria-hidden="true">↻</span></button></div>
+  </footer>
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <p id="live-status" class="sr-only" role="status">Lilies 正在为你开启首页。可以跳过开场。</p>
+  <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-inner"><div class="dialog-top"><span id="detail-kicker">EXPLORE</span><button id="close" aria-label="关闭">×</button></div><h2 id="detail-title"></h2><div id="detail-body"></div></div></dialog>
+  <audio id="music-audio" preload="none"></audio>
+  <noscript><div class="noscript">FlashBlank7 — 研究、小说与音乐。开场动画需要 JavaScript。<a href="/research/">研究与项目</a> · <a href="/library/">小说与世界</a> · <a href="/music/">音乐</a></div></noscript>
+</body>
+</html>
