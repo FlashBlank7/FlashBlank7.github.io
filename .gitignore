@@ -25,3 +25,15 @@ package-lock.json
 # Misc
 _sass/vendors
 assets/js/dist
+
+# Studio: never publish private drafts, cloud credentials or local databases.
+admin/build/
+admin/.wrangler/
+.wrangler/
+.dev.vars*
+.env*
+*.pem
+*.key
+admin/wrangler.local.jsonc
+private-content/
+tmp/

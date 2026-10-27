@@ -68,8 +68,20 @@ for track in catalog:
         errors.append(f'Missing audio: {track["id"]}')
 if len(catalog) != 27 or len({track['id'] for track in catalog}) != 27:
     errors.append('Expected 27 distinct audio recordings')
-if len(documents) != 34:
-    errors.append('Expected 34 published HTML pages')
+baseline = json.loads((DIST.parent / 'content/baseline-pages.json').read_text(encoding='utf-8'))
+for page in baseline:
+    if not (DIST / page).is_file():
+        errors.append(f'Missing original page: {page}')
+release = json.loads((DIST / 'release.json').read_text(encoding='utf-8'))
+for page in release['pages']:
+    if not (DIST / page).is_file():
+        errors.append(f'Missing generated page: {page}')
+for media in release['media']:
+    if not (DIST / 'assets/uploads' / media).is_file():
+        errors.append(f'Missing published image: {media}')
+for forbidden in ('admin', 'private-content', '.git', '.env', '.dev.vars'):
+    if (DIST / forbidden).exists():
+        errors.append(f'Private/build-only path in publication: {forbidden}')
 if not (DIST / '.nojekyll').is_file():
     errors.append('Missing .nojekyll')
 for path in DIST.rglob('*'):
