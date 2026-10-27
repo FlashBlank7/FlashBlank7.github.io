@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "items": {
+    "page-home": {
+      "id": "page-home",
+      "title": {
+        "zh": "旅行，求索",
+        "en": "Travel, explore"
+      },
+      "order": 0,
+      "kind": "page",
+      "route": "home",
+      "subtitle": {
+        "zh": "",
+        "en": ""
+      },
+      "description": {
+        "zh": "",
+        "en": ""
+      },
+      "about": {
+        "zh": "",
+        "en": ""
+      }
+    },
+    "page-research": {
+      "id": "page-research",
+      "title": {
+        "zh": "理之道，就在其中",
+        "en": "The way of reason lies within"
+      },
+      "order": 1,
+      "kind": "page",
+      "route": "research",
+      "subtitle": {
+        "zh": "agent，deep learning modeling",
+        "en": "Agents, deep learning modeling"
+      },
+      "description": {
+        "zh": "世界会被重新认识",
+        "en": "The world will be understood anew"
+      },
+      "about": {
+        "zh": "东京大学新领域创成科学研究科，Computational Biology and Medical Sciences 硕士在读，Nakato Laboratory。\n\n研究调控基因组学与 DNA 序列建模，关注模型究竟从数据中学到了什么，以及如何解释和检验这些结果。",
+        "en": "东京大学新领域创成科学研究科，Computational Biology and Medical Sciences 硕士在读，Nakato Laboratory。\n\n研究调控基因组学与 DNA 序列建模，关注模型究竟从数据中学到了什么，以及如何解释和检验这些结果。"
+      }
+    },
+    "page-library": {
+      "id": "page-library",
+      "title": {
+        "zh": "世界之外的平行世界",
+        "en": "Parallel worlds beyond this one"
+      },
+      "order": 2,
+      "kind": "page",
+      "route": "library",
+      "subtitle": {
+        "zh": "发于生活，高于生活",
+        "en": "Born from life, reaching beyond it"
+      },
+      "description": {
+        "zh": "",
+        "en": ""
+      },
+      "about": {
+        "zh": "",
+        "en": ""
+      }
+    },
+    "page-music": {
+      "id": "page-music",
+      "title": {
+        "zh": "一些音乐碎片",
+        "en": "Fragments of music"
+      },
+      "order": 3,
+      "kind": "page",
+      "route": "music",
+      "subtitle": {
+        "zh": "",
+        "en": ""
+      },
+      "description": {
+        "zh": "",
+        "en": ""
+      },
+      "about": {
+        "zh": "",
+        "en": ""
+      }
+    },
+    "page-blog": {
+      "id": "page-blog",
+      "title": {
+        "zh": "随记",
+        "en": "Journal"
+      },
+      "order": 4,
+      "kind": "page",
+      "route": "blog",
+      "subtitle": {
+        "zh": "",
+        "en": ""
+      },
+      "description": {
+        "zh": "",
+        "en": ""
+      },
+      "about": {
+        "zh": "",
+        "en": ""
+      }
+    },
+    "lilies-in-the-box": {
+      "id": "lilies-in-the-box",
+      "title": {
+        "zh": "Lilies in the box",
+        "en": "Lilies in the box"
+      },
+      "order": 0,
+      "kind": "project",
+      "summary": {
+        "zh": "从桌面上的莉莉丝开始，连接聊天、任务、专注与论文阅读。一个仍在生长的个人桌面伴侣。",
+        "en": "Starting with Lilies on the desktop, bringing together chat, tasks, focus and paper reading. A personal desktop companion still in development."
+      },
+      "body": "",
+      "category": "DESKTOP COMPANION / IN DEVELOPMENT",
+      "tags": [
+        "Python",
+        "Qt / QML",
+        "Agent",
+        "Reading"
+      ],
+      "url": "",
+      "cover": null
+    },
+    "utoo": {
+      "id": "utoo",
+      "title": {
+        "zh": "UTOO",
+        "en": "UTOO"
+      },
+      "order": 1,
+      "kind": "project",
+      "summary": {
+        "zh": "校园社区应用。包含注册登录、帖子与评论、分版权限和内容管理。",
+        "en": "A campus community app with sign-up, login, posts, comments, board-level permissions and content moderation."
+      },
+      "body": "",
+      "category": "COMMUNITY / WEB APPLICATION",
+      "tags": [
+        "FastAPI",
+        "Vue 3",
+        "SQL"
+      ],
+      "url": "https://github.com/FlashBlank7/UTOO",
+      "cover": null
+    },
+    "lilies": {
+      "id": "lilies",
+      "title": {
+        "zh": "Lilies",
+        "en": "Lilies"
+      },
+      "order": 2,
+      "kind": "project",
+      "summary": {
+        "zh": "AI 建模与工作流原型。把模型对话、工具调用、任务执行与实验进度连接起来。",
+        "en": "An AI modeling and workflow prototype connecting model conversations, tool calls, task execution and experiment progress."
+      },
+      "body": "",
+      "category": "MODELING / PROTOTYPE",
+      "tags": [
+        "FastAPI",
+        "Next.js",
+        "Docker"
+      ],
+      "url": "https://github.com/FlashBlank7/Lilies",
+      "cover": null
+    },
+    "coc-room": {
+      "id": "coc-room",
+      "title": {
+        "zh": "CoC Room",
+        "en": "CoC Room"
+      },
+      "order": 3,
+      "kind": "project",
+      "summary": {
+        "zh": "跑团文档解析与线上房间客户端。将人物、场景和线索整理为可检查的结构，并探索多人房间同步。",
+        "en": "A tabletop RPG document parser and online room client. It organizes characters, scenes and clues into reviewable structures and explores multiplayer synchronization."
+      },
+      "body": "",
+      "category": "TABLETOP RPG / EARLY DEVELOPMENT",
+      "tags": [
+        "React",
+        "WebRTC",
+        "SQLite"
+      ],
+      "url": "",
+      "cover": null
+    },
+    "appearance": {
+      "id": "appearance",
+      "kind": "appearance",
+      "title": {
+        "zh": "网站外观",
+        "en": "Appearance"
+      },
+      "order": 0,
+      "preset": "lilies",
+      "accent": "#cfb0ed",
+      "background": null,
+      "position": "center",
+      "overlay": 0.7,
+      "nav": [
+        {
+          "route": "research",
+          "label": {
+            "zh": "研究与项目",
+            "en": "Research & projects"
+          }
+        },
+        {
+          "route": "library",
+          "label": {
+            "zh": "小说与世界",
+            "en": "Stories & worlds"
+          }
+        },
+        {
+          "route": "music",
+          "label": {
+            "zh": "音乐",
+            "en": "Music"
+          }
+        },
+        {
+          "route": "blog",
+          "label": {
+            "zh": "随记",
+            "en": "Journal"
+          }
+        }
+      ]
+    }
+  }
+}

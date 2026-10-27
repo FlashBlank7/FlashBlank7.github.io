@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
+<!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#090a13">
@@ -11,7 +9,7 @@
   <title>FlashBlank7 · Lilies</title>
   <link rel="stylesheet" href="style.css">
   <script type="module" src="/i18n.js"></script><script type="module" src="opening.js"></script>
-<link rel="stylesheet" href="/i18n.css"></head>
+<link rel="stylesheet" href="/i18n.css"><link rel="stylesheet" href="/site-theme.css"><script type="module" src="/site-settings.js"></script></head>
 <body data-phase="intro">
   <canvas id="cosmos" aria-hidden="true"></canvas>
   <div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
@@ -31,19 +29,15 @@
       <div class="platform"></div>
       <div class="specimen-label"><span class="status-light"></span> LILIES <span class="muted">/ FIRST ENCOUNTER</span></div>
     </div>
-    <svg class="cord" viewBox="0 0 1440 1000" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="cord-light"><stop stop-color="#b75a72"/><stop offset=".5" stop-color="#f4b6bd"/><stop offset="1" stop-color="#bb84e9"/></linearGradient></defs><path id="thread" d="M720 425 C680 605 1140 860 1280 520 C1400 200 650 60 370 450 C200 680 250 800 530 780"/></svg>
+    <svg class="cord" viewBox="0 0 1440 1000" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="cord-light"><stop stop-color="#b75a72"></stop><stop offset=".5" stop-color="#f4b6bd"></stop><stop offset="1" stop-color="#bb84e9"></stop></linearGradient></defs><path id="thread" d="M720 425 C680 605 1140 860 1280 520 C1400 200 650 60 370 450 C200 680 250 800 530 780"></path></svg>
     <div class="arrival" aria-hidden="true"><span>FIRST ENCOUNTER</span><p>你找到这里了。</p></div>
     <section class="hero" aria-labelledby="site-title">
       <p class="eyebrow"><span></span> 研究 · 故事 · 声音</p>
       <h1 id="site-title">Flash<br><span>Blank</span><em>7</em><span class="title-dot">.</span></h1>
-      <p class="intro-copy">旅行，求索</p>
+      <p class="intro-copy"><span data-copy-zh="旅行，求索" data-copy-en="Travel, explore" translate="no">旅行，求索</span></p>
       <button class="explore" data-panel="all"><span>跟随 Lilies，开始探索</span><span class="arrow" aria-hidden="true">↗</span></button>
     </section>
-    <nav class="destinations" aria-label="作品入口">
-      <button data-panel="research"><span class="destination-no">01</span><span><strong>研究与项目</strong><small>RESEARCH &amp; PROJECTS</small></span><span class="destination-arrow" aria-hidden="true">↗</span></button>
-      <button data-panel="fiction"><span class="destination-no">02</span><span><strong>小说与世界</strong><small>STORIES &amp; WORLDS</small></span><span class="destination-arrow" aria-hidden="true">↗</span></button>
-      <button data-panel="music"><span class="destination-no">03</span><span><strong>音乐</strong><small>SOUND &amp; RESONANCE</small></span><span class="destination-arrow" aria-hidden="true">↗</span></button>
-    </nav>
+    <nav class="destinations" aria-label="作品入口"><button data-panel="research"><span class="destination-no">01</span><span><strong><span data-copy-zh="研究与项目" data-copy-en="Research &amp; projects" translate="no">研究与项目</span></strong><small>RESEARCH &amp; PROJECTS</small></span><span class="destination-arrow" aria-hidden="true">↗</span></button><button data-panel="fiction"><span class="destination-no">02</span><span><strong><span data-copy-zh="小说与世界" data-copy-en="Stories &amp; worlds" translate="no">小说与世界</span></strong><small>STORIES &amp; WORLDS</small></span><span class="destination-arrow" aria-hidden="true">↗</span></button><button data-panel="music"><span class="destination-no">03</span><span><strong><span data-copy-zh="音乐" data-copy-en="Music" translate="no">音乐</span></strong><small>SOUND &amp; RESONANCE</small></span><span class="destination-arrow" aria-hidden="true">↗</span></button><a class="blog-destination" href="/blog/"><span class="destination-no">04</span><span><strong data-copy-zh="随记" data-copy-en="Journal" translate="no">随记</strong><small>JOURNAL</small></span><span>↗</span></a></nav>
   </main>
   <footer>
     <div><span class="footer-label">FLASHBLANK7</span><span class="footer-divider">/</span><span>研究 · 故事 · 声音</span></div>
@@ -54,5 +48,6 @@
   <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-inner"><div class="dialog-top"><span id="detail-kicker">EXPLORE</span><button id="close" aria-label="关闭">×</button></div><h2 id="detail-title"></h2><div id="detail-body"></div></div></dialog>
   <audio id="music-audio" preload="none"></audio>
   <noscript><div class="noscript">FlashBlank7 — 研究、小说与音乐。开场动画需要 JavaScript。<a href="/research/">研究与项目</a> · <a href="/library/">小说与世界</a> · <a href="/music/">音乐</a></div></noscript>
-</body>
-</html>
+
+
+</body></html>
