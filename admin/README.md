@@ -18,6 +18,8 @@ pnpm exec wrangler deploy --dry-run --config admin/wrangler.jsonc
 
 ## First deployment
 
+Cloudflare requires a verified account email before creating a Worker (error 10034 otherwise). Logging into Wrangler does not complete email verification. The owner must follow the verification message from Cloudflare; do not forward that message's verification token into this repository or chat.
+
 1. Sign into your own Cloudflare account. Keep the account on Workers Free. Do not enable billing, R2, paid Workers or other paid services for this setup.
 2. Use `pnpm exec wrangler login --use-keyring --scopes account:read user:read workers:write workers_scripts:write d1:write`. Windows may require `@napi-rs/keyring@1.3.0` in Wrangler's native keyring directory. Authentication credentials are stored by Wrangler; do not paste them into chat.
 3. `pnpm exec wrangler d1 create flashblank7-studio`. Copy `admin/wrangler.jsonc` to ignored `admin/wrangler.local.jsonc`; fill in the returned database ID and your exact `APP_ORIGIN`, such as `https://flashblank7-studio.<your-subdomain>.workers.dev`. This file must contain only IDs/URLs, no secrets.
@@ -26,6 +28,12 @@ pnpm exec wrangler deploy --dry-run --config admin/wrangler.jsonc
 6. Put the App ID, Client ID and Installation ID in the ignored local Wrangler config. Generate a client secret and a private key. Store them as `GITHUB_CLIENT_SECRET` and `GITHUB_PRIVATE_KEY` in the Worker's **Settings → Variables and Secrets**, type **Secret**. The key must be PKCS#8 (`BEGIN PRIVATE KEY`); use the helper below to convert and upload without printing or writing a converted key. Never put the downloaded key in a repository.
 7. Redeploy the configured Worker. Sign in as GitHub user ID **122159986**; every other identity must be rejected. Enable GitHub 2FA in account security settings.
 8. Complete the live acceptance checks below before treating the editor as production-ready.
+
+### Guided GitHub App setup
+
+After the Worker exists and `APP_ORIGIN` in the ignored local config matches its real HTTPS URL, run `node scripts/configure-github-app.mjs`. Open the printed loopback URL in the same browser throughout the setup. The local helper pre-fills a private GitHub App manifest. The owner confirms creation and selects exactly the two website repositories on GitHub. It verifies app/installation ownership and permissions, converts the key in memory, uploads credentials through Wrangler's stdin to Worker Secrets, writes only non-secret IDs to the ignored config, and redeploys. It does not log credentials or callback codes. Keep the process running until it reports completion; the setup URL expires after 55 minutes. If interrupted after app creation, resume via the manual key/secret steps rather than creating duplicate Apps.
+
+The helper binds only to `127.0.0.1:8977`, checks the exact Host, binds callbacks to a one-time state and browser cookie, and disables caching and referrer leakage. The setup helper is never shipped with the Worker or GitHub Pages assets.
 
 Private key conversion/upload (paths are example placeholders):
 
